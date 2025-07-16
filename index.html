@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi Portafolio - Gerardo Leija</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Íconos de Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link rel="icon" type="image/jpg" href="assets/squids.png" />
+</head>
+<body>
+
+  <!-- HEADER CON VIDEO DE FONDO -->
+ <header>
+  <video autoplay muted loop playsinline class="video-bg">
+    <source src="assets/desves.mp4" type="video/mp4" />
+    Tu navegador no soporta el video.
+  </video>
+
+  <div class="header-content">
+    <div class="logo-container">
+      <img src="assets/Portafolio1logo.png" alt="Mi Logo" class="logo" />
+      <img src="assets/DOS.png" alt="Info Extra" class="logo-info" />
+    </div>
+    <p></p>
+  </div>
+</header>
+<h1>M Y</h1> <h1>P O R T F O L I O</h1>
+  <!-- GRID DE CATEGORÍAS -->
+<main class="grid-categorias">
+  
+
+<div class="categoria">
+  <div class="thumb" style="background-image: url('assets/animation.png');">
+    <video src="assets/worale.mp4" muted loop></video>
+  </div>
+  <h2 class="categoria-title">Animation & Motion Graphics</h2>
+<p class="categoria-desc">3D & 2D ANIMATION / MOTION GRAPHICS</p>
+  <a href="animation.html">View</a>
+</div>
+
+
+  <div class="categoria">
+    <div class="thumb" style="background-image: url('assets/ALCH1icon.jpg');">
+      <video src="assets/graphic.mp4" muted loop></video>
+    </div>
+    <h2 class="categoria-title">Design</h2>
+    <p class="categoria-desc">LOGOS / GRAPHIC DESIGN / WEB DESIGN / DIGITAL ILLUSTRATION </p>
+    <a href="design.html">View</a>
+  </div>
+
+  <div class="categoria">
+    <div class="thumb" style="background-image: url('assets/3d.png');">
+      <video src="assets/3d.mp4" muted loop></video>
+    </div>
+    <h2 class="categoria-title">3D</h2>
+    <p class="categoria-desc">3D MODELING / RIGGING / TEXTURING </p>
+    <a href="3d.html">View</a>
+  </div>
+
+  <div class="categoria">
+    <div class="thumb" style="background-image: url('assets/video.png');">
+      <video src="assets/mijo2.mp4" muted loop></video>
+    </div>
+    <h2 class="categoria-title">Video Editing</h2>
+    <p class="categoria-desc">VIDEO EDITING / VFX</p>
+    <a href="video.html">View</a>
+  </div>
+</main>
+
+<!-- DESCRIPCIÓN PERSONAL -->
+<section class="descripcion-personal">
+  <h2>About me</h2>
+  <p>
+    I'm Gerardo Leija, animator, video editor, graphic/3D/web designer and a multimedia creative.
+    I have a strong passion for transforming ideas into motion images, combining technique, art, and visual narrative.
+    My aim is to bring fresh, practical visual solutions to every project I take on.
+   
+  </p>
+</section>
+
+<!-- CV VISIBLE + DESCARGABLE -->
+<section class="cv-section">
+  <h2>My CV</h2>
+  <iframe src="assets/MiCV.pdf" frameborder="0"></iframe>
+  <a href="assets/MiCV.pdf" download class="btn-download-cv">
+    Download CV
+  </a>
+</section>
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; Gerardo Leija Gauna 2025</p>
+    <p1>Contact me by:</p1>
+      <p>geraleija2002@gmail.com</p>
+      <p>Tel: 8135532796</p>
+    
+    <div class="redes">
+       <a href="https://www.linkedin.com/in/gerardo-leija-gauna-195660211/" target="_blank" aria-label="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <!--
+    <a href="https://mx.indeed.com/tu-perfil-indeed" target="_blank" aria-label="Indeed">
+      <img src="assets/indeed-icon.png" alt="Indeed" class="icono-link" />
+    </a>
+    <a href="https://www.occ.com.mx/perfil/tu-usuario" target="_blank" aria-label="OCC Mundial">
+      <img src="assets/occ-icon.png" alt="OCC Mundial" class="icono-link" />
+    </a> 
+    -->
+      <a href="https://www.instagram.com/jeje_gerart/" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      
+    </div>
+  </footer>
+
+  <!-- SCRIPT: Videos de hover -->
+  <script>
+    const categorias = document.querySelectorAll('.categoria');
+
+    categorias.forEach(categoria => {
+      categoria.addEventListener('mouseenter', () => {
+        const video = categoria.querySelector('video');
+        if (video) {
+          video.play();
+        }
+      });
+
+      categoria.addEventListener('mouseleave', () => {
+        const video = categoria.querySelector('video');
+        if (video) {
+          video.pause();
+          video.currentTime = 0;
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
