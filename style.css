@@ -13,6 +13,7 @@ body {
 
 /* HEADER */
 header {
+   flex-direction: column;
   position: relative;
   height: 350px; /* Altura del header */
   overflow: hidden;
@@ -38,6 +39,7 @@ header .video-bg {
 }
 
 .header-content {
+  flex-direction: column;
   position: relative;
   z-index: 2;
   text-align: center;
